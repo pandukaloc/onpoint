@@ -1,0 +1,104 @@
+/* ===========================
+   ======= Body style ======== 
+   =========================== */
+
+body {
+	
+	font-size: 20px;
+     
+}
+
+h2 {
+	margin-bottom: 20px;
+	color: #474E69;
+}
+
+/* ===========================
+   ====== Contact Form ======= 
+   =========================== */
+
+input, textarea {
+	padding: 10px;
+	border: 1px solid #E5E5E5;
+	width: 200px;
+	color: #999999;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;		
+}
+
+textbox{
+    font-size: 16px;
+	width: 300px;
+	height: 25px;
+}
+
+
+.button, .submit .buttons{
+
+		background-color: #4CAF50;
+
+    	color: black;
+    	width: 200px;
+ 
+   	    margin: 40px;
+    	padding: 12px;
+        
+    	font-size: 20px;
+		border: none;
+
+		cursor: pointer;
+	
+}
+
+
+
+textarea {
+	width: 400px;
+	height: 150px;
+	max-width: 400px;
+	line-height: 18px;
+}
+
+
+
+
+input:hover, textarea:hover,
+input:focus, textarea:focus {
+	border-color: 1px solid #C9C9C9;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;	
+}
+
+
+
+
+
+.asterisk:after {
+	content:" *"; 
+	color: #e32;
+	position: absolute; 
+	margin: 0px 0px 0px -20px; 
+	font-size: xx-large; 
+	padding: 0 5px 0 0; 
+}
+
+
+
+/* ===========================
+   ====== Buttons ====== 
+   =========================== */
+
+.button  {
+	width: 120px; 
+	height: 60px;
+	background-color: #474E69; 
+    opacity: 0.7;
+    font-family: "Arial";
+    font-size: 16px;
+	color: #FFF;
+	border-radius: 3px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;		
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>script</title>
+    <style>
+
+        video#bgvid {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            -ms-transform: translateX(-50%) translateY(-50%);
+            -moz-transform: translateX(-50%) translateY(-50%);
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            background: url(images/video.jpg) no-repeat;
+            background-size: cover;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+                    }
+        body{
+            font-family: Calibri,sans-serif;
+        }
+        .background-wrap{
+              position: fixed;
+            z-index: -1000;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            top:0;
+            left: 0;
+        }
+        #video-bg-elem{
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-height: 100%;
+            min-width:100% ;
+        }
+        .content{
+            position: absolute;
+            width: 100%;
+            min-height: 100%;
+            z-index: 1000;
+            background-color: rgba(0,0,0,0.7);
+        }
+        .content h4{
+            text-align: center;
+            font-size: 65px;
+            text-transform: uppercase;
+            font-weight: 300;
+            color: #fff;
+            padding-top: 15%;
+            margin-bottom: 10px;
+        }
+        .content ul{
+            text-align: center;
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            color: #aaa;
+
+
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+<div class="background-wrap">
+<video id="bgvid" autoplay="true"preload="auto" loop="loop" loop poster="video.jpg"  >
+        <source src="images/video.mp4" type="video/mp4">
+</video>
+</div>
+<div class="content">
+
+    <h4> Welcome to On Point</h4>
+    <br><br>
+     <ul> Team On Point</ul>
+    <br>
+            <ul>
+            <li>Oshani </li><br>
+            <li>Nisakya</li><br>
+            <li>Dewni</li><br>
+            <li>Panduka</li><br>
+            <li>Chavin</li><br>
+        </ul>
+
+
+   </div>
+<script>
+    setTimeout(function(){
+        window.location='home.php';
+    }, 8500);
+</script>
+</body>
+</html>

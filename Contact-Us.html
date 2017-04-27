@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Contact Us</title>
+
+	<meta charset="utf-8" />
+
+	<link rel="stylesheet" href="styleContact-us.css" type="text/css" media="all" />
+</head>
+
+<body>
+
+	<h2>WE'D LOVE TO HEAR FROM YOU...</h2>
+
+	<form id="myform" action="userinfo.php" method="post" >
+		<div class="required">
+		<p>Name</p>
+
+		<input value="name" type="text" class = "textbox" id="name" placeholder="Full Name" required/>
+
+		<span class="asterisk">  </span>
+		<p>Email Address</p>
+
+		<input value="email" type="email" class = "textbox" id="email" placeholder="mail@example.com" required />
+
+		<span class="asterisk">  </span>
+		<p>Message</p>
+		<textarea value="message"name="text" placeholder="Write something to us"id="message" required/></textarea>
+		<span class="asterisk">  </span>
+		<br/>
+		<br/>
+		<button  type="button"  class = "button" value="submit">Submit</button>
+
+		<button type="reset" class = "button" value="Reset">Reset</button>
+
+		</div>
+
+	</form>
+
+<script type="text/javascript">
+
+	function formValiadtion() {
+
+        if (document.getElementById("name").value == "") {
+
+            alert("Name field cannot be empty");
+
+        }
+
+        else if (document.getElementById("email").value == "") {
+
+            alert("Email field cannot be empty");
+
+        }
+
+        else if (!document.getElementById("email").value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+
+            alert("Please check you email address");
+
+        }
+
+        else if (document.getElementById("message").value == "") {
+
+            alert("Please enter your Message");
+
+        }
+
+
+        else {
+
+            var name = document.getElementById("name").value;
+
+            alert(name + " your message has been sent");
+
+        }
+
+    }
+
+</script>
+
+<br/>
+<h2>FIND US </h2>
+
+<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'>
+</script>
+
+<div style='overflow:hidden;height:440px;width:700px;'>
+<div id='gmap_canvas' style='height:440px;width:700px;'>
+</div>
+	</div>
+
+
+<style>
+#gmap_canvas img{max-width:none!important;background:none!important}
+</style>
+
+
+<script type='text/javascript'>function init_map(){
+var myOptions = {zoom:10,center:new google.maps.LatLng(6.865661299999999,79.86145390000001),mapTypeId: google.maps.MapTypeId.TERRAIN};
+map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(6.865661299999999,79.86145390000001)});
+infowindow = new google.maps.InfoWindow({content:'<strong>Informatics Institute of Technology (IIT)</strong><br>No.57, Ramakrishna Road, Colombo 06, Sri Lanka<br>'});
+google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});
+infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+</script>
+
+</body>
+
+</html>
+
